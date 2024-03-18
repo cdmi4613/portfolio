@@ -136,7 +136,7 @@ body.fixed {
 	position: absolute;
 	left: 0;
 	width: 100px;
-	padding-left: 3vw;
+	margin-left: 3em;
 	text-align: left;
 }
 #main header .header_inner .namelogo.none{
@@ -157,9 +157,9 @@ body.white #main header .header_inner .namelogo span{
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 45px;
-	height: 45px;
-	padding-right: 3vw;
+	width: 50px;
+	height: 35px;
+	margin-right: 3em;
 	z-index: 100000;
 }
 #tab.pause{
@@ -170,7 +170,7 @@ body.white #tab.pause{
 	background: url(../image/tab1.png) no-repeat center center;
 }
 #tab.exit{
-	background: url(../image/white_btn-close-32.png) no-repeat center right 45px;
+	background: url(../image/white_btn-close-32.png) no-repeat center right 25px;
 	z-index: 1100;	
 }
 
