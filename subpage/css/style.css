@@ -44,7 +44,7 @@ header{
 header .header_inner{
 	position: relative;
 	height: 100px;
-	padding: 0 4em;
+	padding: 0 2em;
 }
 header .header_inner .backPage a{
 	position: absolute;
@@ -55,7 +55,7 @@ header .header_inner .backPage a{
 	background-size: 40px;
 	text-indent: -9999px;
 	padding: 50px 50px 50px 0;
-	margin-left: 4em;
+	margin-left: 2em;
 }
 
 #page2 {
@@ -65,7 +65,7 @@ header .header_inner .backPage a{
 #page2 .page2_inner{
 	max-width: 1200px;
 	margin: 500px auto 0;
-	padding: 0 4em;
+	padding: 0 2em;
 }
 #page2 .page2_inner .sub_title{
 	font-size: 1.5em;
@@ -413,7 +413,7 @@ header .header_inner .backPage a{
 		gap: 30px;
 	}
 	#study_list .study_list_inner ul.right ul li > a{
-		padding: 0 40px 0 0;
+		padding: 10px 40px 10px 0;
 	}
 }
 

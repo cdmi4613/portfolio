@@ -136,7 +136,7 @@ body.fixed {
 	position: absolute;
 	left: 0;
 	width: 100px;
-	margin-left: 3em;
+	margin-left: 2em;
 	text-align: left;
 }
 #main header .header_inner .namelogo.none{
@@ -159,7 +159,7 @@ body.white #main header .header_inner .namelogo span{
 	top: 0;
 	width: 50px;
 	height: 35px;
-	margin-right: 3em;
+	margin-right: 2em;
 	z-index: 100000;
 }
 #tab.pause{
@@ -669,7 +669,7 @@ body.white #page1 .right > p > a{
 	flex-wrap: nowrap;
 }
 #page2 .page2_inner .sklis_list_inner > ul:last-child{
-	padding-left: 80px;
+	padding-left: 100px;
 }
 
 }
