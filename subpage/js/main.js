@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){
     let swiper=new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: 4,
+        // spaceBetween: 30,
         // loop: true,
         // loopedSlides: 1,
         pagination: { 
@@ -27,19 +27,10 @@ window.addEventListener("load", function(){
             100:{
                 slidesPerView: 1,
             },
-            500:{
-                slidesPerView: 1,
-            },
-            700:{
+            750:{
                 slidesPerView: 2,
-                spaceBetween: 20,
             },
-            850:{
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-            
-            1170:{
+            1300:{
                 slidesPerView: 3,
             },
         }
