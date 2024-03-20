@@ -256,16 +256,16 @@ header .header_inner .backPage a{
 }
 
 #sub_slider .swiper .swiper-slide a span{
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: 400;
 	line-height: 10px;
-	color: #fff;
+	color: #ededed;
 }
 
 #sub_slider .swiper .swiper-slide a p{
-    font-size: 1.7em;
+    font-size: 1.4em;
     font-weight: 400;
-    margin-top: 20px;
+	margin: 20px 0 10px 0;
     color: #fff;
 } 
 #sub_slider .swiper .swiper-slide a p span.ss{
@@ -290,7 +290,7 @@ header .header_inner .backPage a{
 
 #sub_slider .swiper .swiper-scrollbar{
 	width: 100%;
-    bottom: -30px;
+    bottom: -50px;
 }
 
 #sub_slider .swiper .swiper-scrollbar-drag {
