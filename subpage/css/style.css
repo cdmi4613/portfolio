@@ -233,8 +233,15 @@ header .header_inner .backPage a{
 	font-family:'Noto Sans KR', sans-serif;
 	color: #ededed;
 }
+.design_title{
+	font-size: 1.5em;
+	font-weight: 600;
+	font-family:'Noto Sans KR', sans-serif;
+	color: #ededed;
+	margin-top: 100px;
+}
 #page4 .page4_inner .sub_title{
-	margin-bottom: 100px;
+	margin-bottom: 70px;
 }
 
 .container {
