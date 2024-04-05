@@ -1,4 +1,5 @@
 window.addEventListener("load", function(){
+	
 	AOS.init({
 		easing: "ease-in-out-sine",
 		once: true
@@ -60,6 +61,8 @@ window.addEventListener("load", function(){
 
 	function scrollHandler(){
 		wint=window.scrollY ;
+
+		console.log(document.body.classList.contains("white") === true)
 
 		if(wint < pageList[1].offsetTop-winh/3 || wint > pageList[3].offsetTop-winh/4){
 			if(document.body.classList.contains("white") === true){
