@@ -204,4 +204,8 @@ window.addEventListener("load", function(){
 	video.addEventListener("ended", function(){
 		flag=null;
 	});
+
+
+	
+
 });
