@@ -700,46 +700,44 @@ body.white #page1 .right > p > a{
 	color: #333;
 }
 /*  */
-/* .hover-text {
-	position: relative;
-	font-size: 40px;
-	font-weight: bold;
-	color: transparent;
-	-webkit-background-clip: text;
-	background-clip: text;
-	cursor: pointer;
+#page3 .page3_inner .m_text ul li strong{
+	font-size: 10em;
+    font-weight: bold;
+    color: #333;
+    transition: text-shadow 0.3s ease;
 }
-.hover-text::before {
-	content: attr(data-text);
-	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	color: black;
-	-webkit-background-clip: text;
-	background-clip: text;
-	transition: top 0.5s ease;
+#page3 .page3_inner .m_text ul li strong:hover {
+    text-shadow: 7px 7px 15px rgba(0,0,0,0.2);
 }
-.hover-text:hover::before {
-	top: 0;
-} */
+
 
 /*  */
 
+/*  */
 
-#page3 .page3_inner .m_text ul li:last-child {
+#rel{
 	position: relative;
-	display: block;
+}
+#button {
+	display: block; /* 요소를 항상 보이게 하되, 시작할 때는 왼쪽으로 숨겨둠 */
+    opacity: 0; /* 시작할 때는 투명하게 */
+    position: absolute;
+    left: 0; /* 왼쪽에서 시작 */
     color: #333;
-    padding: 20px 80px 20px 30px;
-
-
-	overflow: hidden;
-	transition: color 0.4s ease;
+    padding: 10px 80px 10px 30px;
+    overflow: hidden;
+    /* transform을 사용해 X축으로 -100%만큼 이동시켜 왼쪽으로 숨김 */
+    transform: translateX(-100%);
+    /* opacity와 transform에 대한 전환 효과 추가 */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+#button.up{
+	opacity: 1; /* .up 클래스가 추가되면 불투명하게 만들어 화면에 표시 */
+    /* translateX를 0%로 설정해 원래 위치로 이동 */
+    transform: translateX(0%);
 }
 
-#page3 .page3_inner .m_text ul li:last-child::before {
+/* #button::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -751,17 +749,16 @@ body.white #page1 .right > p > a{
     z-index: -1;
   }
 
-
-  #page3 .page3_inner .m_text ul li:last-child:hover {
+  #button:hover {
 	color: #333;
 	font-weight: 900;
   }
-  #page3 .page3_inner .m_text ul li:last-child:hover::before {
+  #button:hover::before {
     height: 100%;
-  }
+  } */
 
 
-  #page3 .page3_inner .m_text ul li:last-child::after{
+  #button::after{
     content: "";
     position: absolute;
     right: 10px;
@@ -769,7 +766,7 @@ body.white #page1 .right > p > a{
     background-size: 50px;
     width: 50px;
     height: 50px;
-}
+} 
 
 
 
@@ -777,16 +774,11 @@ body.white #page1 .right > p > a{
 	color: #333;
 }
 
-#page3 .page3_inner .m_text ul li.button{
+ /* #page3 .page3_inner .m_text ul li.button{
 	border: 1px solid #333;
 	border-radius: 10px;
-}
-/* #pagenumber3{
-	max-width: 1400px;
-	margin: 0 auto;
-	color: #ededed;
-	padding-bottom: 50px;n
-} */
+}  */
+
 @media only screen and (max-width: 900px){
 	#page3 .page3_inner .m_text ul{
 		flex-direction: column;

@@ -205,6 +205,20 @@ window.addEventListener("load", function(){
 		flag=null;
 	});
 
+	let strong=document.getElementById("hover-text")
+	let button=document.getElementById("button");
+
+	strong.addEventListener("mouseenter", function(){
+
+		button.classList.add("up")
+	
+	})
+	strong.addEventListener("mouseleave", function(){
+	
+		button.classList.remove("up")
+	
+	})
+	
 
 	
 
