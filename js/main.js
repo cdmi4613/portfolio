@@ -162,6 +162,54 @@ window.addEventListener("load", function(){
 		});
 	}
 
+	// 이전 비디오
+	// let video=document.getElementById("Aimg");
+	// video.muted=true;
+
+	// let buttonList=document.querySelectorAll(".right p a");
+
+	// let videoList=["layout.mp4", "graph.mp4", "key.mp4"];
+	// let flag;
+
+
+
+	// for(let i=0; i<buttonList.length; i++){
+
+	// 	buttonList[i].addEventListener("mouseenter", function(e){
+	// 		playVideo(i, videoList[i]);
+	// 		video.classList.add("no");
+	// 	});
+
+	// 	buttonList[i].addEventListener("mouseleave", function(e){
+	// 		video.pause();
+	// 		flag=null;
+	// 		video.classList.remove("no");
+	// 	});
+	// }
+
+	// function playVideo(n, src){
+	// 	console.log(n, src);
+
+	// 	if(flag != n){
+	// 		flag=n;
+	// 		video.setAttribute("src", "video/"+src);
+
+	// 		video.currentTime=0;
+	// 		video.play();
+	// 	}
+	// 	else{
+	// 		return;
+	// 	}
+	// }
+
+	// video.addEventListener("ended", function(){
+	// 	flag=null;
+	// });
+
+	// // 이전 비디오 끝
+
+
+	// 오류 대체 비디오
 	let video=document.getElementById("Aimg");
 	video.muted=true;
 
@@ -169,8 +217,6 @@ window.addEventListener("load", function(){
 
 	let videoList=["layout.mp4", "graph.mp4", "key.mp4"];
 	let flag;
-
-
 
 	for(let i=0; i<buttonList.length; i++){
 
@@ -180,7 +226,6 @@ window.addEventListener("load", function(){
 		});
 
 		buttonList[i].addEventListener("mouseleave", function(e){
-			video.pause();
 			flag=null;
 			video.classList.remove("no");
 		});
@@ -191,19 +236,29 @@ window.addEventListener("load", function(){
 
 		if(flag != n){
 			flag=n;
-			video.setAttribute("src", "video/"+src);
+			video.setAttribute("src", "./video/"+src);
 
-			video.currentTime=0;
-			video.play();
+			video.pause();
+
+			setTimeout(() => {
+				video.currentTime = 0;
+				video.play();
+			}, 300)
+
 		}
 		else{
-			return;
+			flag=null;
 		}
 	}
 
 	video.addEventListener("ended", function(){
 		flag=null;
 	});
+
+	
+
+
+	// 
 
 	let strong=document.getElementById("hover-text")
 	let button=document.getElementById("button");
