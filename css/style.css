@@ -700,13 +700,55 @@ body.white #page1 .right > p > a{
 	color: #333;
 }
 #page3 .page3_inner .m_text ul li:last-child {
+	position: relative;
+	display: block;
     color: #333;
-    padding: 30px 80px 30px 30px;
-    background: url(../image/right.png) no-repeat top 10px right;
-    background-size: 70px;
+    padding: 20px 80px 20px 30px;
+
+
+	overflow: hidden;
+	transition: color 0.4s ease;
 }
+
+#page3 .page3_inner .m_text ul li:last-child::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color:  #ccc; /* 배경 색상 */
+    transition: height 0.4s ease;
+    z-index: -1;
+  }
+
+  #page3 .page3_inner .m_text ul li:last-child:hover {
+	color: #333;
+	font-weight: 900;
+  }
+  #page3 .page3_inner .m_text ul li:last-child:hover::before {
+    height: 100%;
+  }
+
+
+  #page3 .page3_inner .m_text ul li:last-child::after{
+    content: "";
+    position: absolute;
+    right: 10px;
+    background: url(../image/right.png) no-repeat top -10px right;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+
 #page3 .page3_inner .m_text ul li a{
 	color: #333;
+}
+
+#page3 .page3_inner .m_text ul li.button{
+	border: 1px solid #333;
+	border-radius: 10px;
 }
 /* #pagenumber3{
 	max-width: 1400px;

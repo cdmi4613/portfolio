@@ -199,22 +199,66 @@ header .header_inner .backPage a{
 		align-items: flex-start;
 		flex-direction: column;
 	}
+
+	#page2 .page2_inner .sklis_list_inner ul.right ul li > a{
+		margin-top: 20px;
+	}
 }
 /*  */
 #page2 .page2_inner .sklis_list_inner ul.right ul li:first-child{
 	font-size: 1.2em;
     font-weight: 400;
     color: #ccc;
-	width: 80%;
+	width: 70%;
 }
 #page2 .page2_inner .sklis_list_inner ul.right ul li > a{
+	position: relative;
 	display: block;
     font-size: 1em;
     font-weight: 300;
-    color: #ececec;
-    padding: 20px 40px 20px 0;
-	background: url(../image/arrow.png) no-repeat center right;
+    color: #ededed;
+	padding: 15px 10px 15px 20px;
+	/* background: url(../image/arrow.png) no-repeat center right;
+	background-size: 30px; */
+	border: 1px solid rgba(255,255,255,.4);
+	border-radius: 10px;
+	width: 100px;
+
+	overflow: hidden;
+	transition: color 0.4s ease;
+}
+/*  */
+#page2 .page2_inner .sklis_list_inner ul.right ul li > a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color:  rgba(255,255,255,.4); /* 배경 색상 */
+    transition: height 0.4s ease;
+    z-index: -1;
+  }
+  /*  */
+
+  #page2 .page2_inner .sklis_list_inner ul.right ul li > a:hover::before {
+    height: 100%;
+  }
+  #page2 .page2_inner .sklis_list_inner ul.right ul li > a:hover {
+	color: #ececec;
+	font-weight: 900;
+  }
+
+
+#page2 .page2_inner .sklis_list_inner ul.right ul li > a::after{
+	content: "";
+	position: absolute;
+	right: 10px;
+	background: url(../image/arrow.png) no-repeat bottom 12px right;
 	background-size: 30px;
+	width: 40px;
+	height: 40px;
+
 }
 
 #page4 .page4_inner{
@@ -260,25 +304,90 @@ header .header_inner .backPage a{
 }
 #sub_slider .swiper .swiper-slide{
 	width: 300px;
+	user-select: none;
 }
 
-#sub_slider .swiper .swiper-slide a span{
+#sub_slider .swiper .swiper-slide span{
 	font-size: 1em;
 	font-weight: 400;
 	line-height: 10px;
 	color: #ededed;
 }
 
-#sub_slider .swiper .swiper-slide a p{
+#sub_slider .swiper .swiper-slide p{
     font-size: 1.4em;
     font-weight: 400;
 	margin: 20px 0 10px 0;
-    color: #fff;
+    color: #ededed;
 } 
-#sub_slider .swiper .swiper-slide a p span.ss{
+#sub_slider .swiper .swiper-slide span.ss{
+	font-size: 1em;
+	color: #ededed;
+	display: block;
+	line-height: 25px;
+	margin-bottom: 30px;
+}
+#sub_slider .swiper .swiper-slide a{
+	position: relative;
+	display: block;
 	font-size: 0.875em;
 	color: #ededed;
+	width: fit-content;
+
+	padding: 10px 30px 10px 20px;
+	margin-right: 30px;
+	border: 1px solid rgba(255,255,255,.4);
+	border-radius: 10px;
+
+	overflow: hidden;
+	transition: color 0.4s ease;
 }
+
+#sub_slider .swiper .swiper-slide a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color:  rgba(255,255,255,.4); /* 배경 색상 */
+    transition: height 0.4s ease;
+    z-index: -1;
+  }
+
+  #sub_slider .swiper .swiper-slide a:hover::before {
+    height: 100%;
+  }
+  #sub_slider .swiper .swiper-slide a:hover {
+	color: #ececec;
+	font-weight: 900;
+  }
+
+
+#sub_slider .swiper .swiper-slide a::after{
+	content: "";
+	position: absolute;
+	right: 10px;
+	background: url(../image/btn_arrow_right.png) no-repeat bottom -1px right;
+	background-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+
+
+
+#sub_slider .swiper .swiper-slide a.web{
+	display: inline-block;
+	padding: 10px 30px 10px 20px;
+	margin-right: 30px;
+	border: 1px solid rgba(255,255,255,.4);
+} 
+
+#sub_slider .swiper .swiper-slide a.Source{
+	display: inline-block;
+	padding: 10px 30px 10px 20px;
+	border: 1px solid  rgba(255,255,255,.4);
+} 
 #sub_slider .swiper {
 	width: 100%;
 	height: 100%;
@@ -286,11 +395,15 @@ header .header_inner .backPage a{
 }
 #sub_slider .swiper .swiper-slide {
 	width: 100%;
-
+}
+#sub_slider .swiper .swiper-slide .view{
+	width: 320px;
 }
 #sub_slider .swiper .swiper-slide img {
 	display: block;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	border-radius: 10px;
 	margin-bottom: 10px;
 }
@@ -400,7 +513,7 @@ header .header_inner .backPage a{
     color: #ccc;
 	width: 300px;
 }
-#study_list .study_list_inner ul.right ul li > a{
+/* #study_list .study_list_inner ul.right ul li > a{
 	display: block;
 	width: 60px;
     font-size: 1em;
@@ -410,7 +523,56 @@ header .header_inner .backPage a{
 	background: url(../image/arrow.png) no-repeat center right;
 	background-size: 30px;
 	gap: 150px;
+} */
+
+#study_list .study_list_inner ul.right ul li > a{
+	position: relative;
+    display: block;
+    font-size: 1em;
+    font-weight: 300;
+    color: #ededed;
+    padding: 15px 10px 15px 20px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 10px;
+    width: 100px;
+
+	overflow: hidden;
+	transition: color 0.4s ease;
 }
+
+#study_list .study_list_inner ul.right ul li > a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color:  rgba(255,255,255,.4); /* 배경 색상 */
+    transition: height 0.4s ease;
+    z-index: -1;
+  }
+
+  #study_list .study_list_inner ul.right ul li > a:hover {
+	color: #ececec;
+	font-weight: 900;
+  }
+
+  #study_list .study_list_inner ul.right ul li > a:hover::before {
+    height: 100%;
+  }
+
+
+
+#study_list .study_list_inner ul.right ul li > a::after{
+	content: "";
+    position: absolute;
+    right: 10px;
+    background: url(../image/arrow.png) no-repeat bottom 12px right;
+    background-size: 30px;
+    width: 40px;
+    height: 40px;
+}
+
 
 @media only screen and (max-width: 600px) {
 	#study_list .study_list_inner ul.right ul li:first-child{
