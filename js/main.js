@@ -219,7 +219,6 @@ window.addEventListener("load", function(){
 	let flag;
 
 	for(let i=0; i<buttonList.length; i++){
-
 		buttonList[i].addEventListener("mouseenter", function(e){
 			playVideo(i, videoList[i]);
 			video.classList.add("no");
@@ -232,49 +231,35 @@ window.addEventListener("load", function(){
 	}
 
 	function playVideo(n, src){
-		console.log(n, src);
+		// console.log(n, src);
 
 		if(flag != n){
 			flag=n;
 			video.setAttribute("src", "./video/"+src);
-
-			video.pause();
-
-			setTimeout(() => {
-				video.currentTime = 0;
-				video.play();
-			}, 300)
-
 		}
 		else{
 			flag=null;
 		}
 	}
 
+	video.addEventListener("loadeddata", function(){
+		// console.log("loadeddata");
+		video.play();
+	});
+
 	video.addEventListener("ended", function(){
 		flag=null;
 	});
-
-	
-
-
-	// 
 
 	let strong=document.getElementById("hover-text")
 	let button=document.getElementById("button");
 
 	strong.addEventListener("mouseenter", function(){
-
-		button.classList.add("up")
-	
+		button.classList.add("up");
 	})
+
 	strong.addEventListener("mouseleave", function(){
-	
-		button.classList.remove("up")
-	
+		button.classList.remove("up");
 	})
 	
-
-	
-
 });
