@@ -87,6 +87,63 @@ header .header_inner .backPage a{
 	max-width: 1200px;
 	/* flex-wrap: wrap; */
 }
+/*  */
+#page2 .page2_inner .sklis_list_inner ul.right ul li:first-child{
+	font-size: 1.2em;
+    font-weight: 400;
+    color: #ccc;
+	width: 70%;
+}
+#page2 .page2_inner .sklis_list_inner ul.right ul li > a{
+	position: relative;
+	display: block;
+    font-size: 1em;
+    font-weight: 300;
+    color: #ededed;
+	padding: 15px 10px 15px 20px;
+	/* background: url(../image/arrow.png) no-repeat center right;
+	background-size: 30px; */
+	border: 1px solid rgba(255,255,255,.4);
+	border-radius: 10px;
+	width: 100px;
+
+	overflow: hidden;
+	transition: color 0.4s ease;
+}
+/*  */
+#page2 .page2_inner .sklis_list_inner ul.right ul li > a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color:  rgba(255,255,255,.4); /* 배경 색상 */
+    transition: height 0.4s ease;
+    z-index: -1;
+  }
+  /*  */
+
+  #page2 .page2_inner .sklis_list_inner ul.right ul li > a:hover::before {
+    height: 100%;
+  }
+  #page2 .page2_inner .sklis_list_inner ul.right ul li > a:hover {
+	color: #ececec;
+	font-weight: 900;
+  }
+
+
+#page2 .page2_inner .sklis_list_inner ul.right ul li > a::after{
+	content: "";
+	position: absolute;
+	right: 10px;
+	background: url(../image/arrow.png) no-repeat bottom 12px right;
+	background-size: 30px;
+	width: 40px;
+	height: 40px;
+
+}
+/*  */
 @media only screen and (max-width: 1140px) {
 	#page2 .page2_inner .sklis_list_inner{
 		flex-wrap: wrap;
@@ -183,6 +240,7 @@ header .header_inner .backPage a{
 	#page2 .page2_inner .sklis_list_inner ul.right > li{
 		font-size: 1em;
 	}
+	
 }
 
 #page2 .page2_inner .sklis_list_inner ul.right ul{
@@ -206,61 +264,7 @@ header .header_inner .backPage a{
 	}
 }
 /*  */
-#page2 .page2_inner .sklis_list_inner ul.right ul li:first-child{
-	font-size: 1.2em;
-    font-weight: 400;
-    color: #ccc;
-	width: 70%;
-}
-#page2 .page2_inner .sklis_list_inner ul.right ul li > a{
-	position: relative;
-	display: block;
-    font-size: 1em;
-    font-weight: 300;
-    color: #ededed;
-	padding: 15px 10px 15px 20px;
-	/* background: url(../image/arrow.png) no-repeat center right;
-	background-size: 30px; */
-	border: 1px solid rgba(255,255,255,.4);
-	border-radius: 10px;
-	width: 100px;
 
-	overflow: hidden;
-	transition: color 0.4s ease;
-}
-/*  */
-#page2 .page2_inner .sklis_list_inner ul.right ul li > a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background-color:  rgba(255,255,255,.4); /* 배경 색상 */
-    transition: height 0.4s ease;
-    z-index: -1;
-  }
-  /*  */
-
-  #page2 .page2_inner .sklis_list_inner ul.right ul li > a:hover::before {
-    height: 100%;
-  }
-  #page2 .page2_inner .sklis_list_inner ul.right ul li > a:hover {
-	color: #ececec;
-	font-weight: 900;
-  }
-
-
-#page2 .page2_inner .sklis_list_inner ul.right ul li > a::after{
-	content: "";
-	position: absolute;
-	right: 10px;
-	background: url(../image/arrow.png) no-repeat bottom 12px right;
-	background-size: 30px;
-	width: 40px;
-	height: 40px;
-
-}
 
 #page4 .page4_inner{
 	margin: 0 auto;
