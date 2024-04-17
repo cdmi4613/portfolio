@@ -124,7 +124,7 @@ header .header_inner .backPage a{
 }
 @media only screen and (max-width: 390px) {
 	#page2 .page2_inner .sklis_list_inner > ul.left > ul li:first-child {
-		font-size: 1.5em;
+		/* font-size: 1.5em; */
 		width: 140px
 	}
 	#study_list .study_list_inner{
@@ -188,7 +188,8 @@ header .header_inner .backPage a{
 #page2 .page2_inner .sklis_list_inner ul.right ul{
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: baseline;
+	/* align-items: center; */
 }
 
 /*  */

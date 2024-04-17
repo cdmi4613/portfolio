@@ -27,7 +27,7 @@ window.addEventListener("load", function(){
             100:{
                 slidesPerView: 1,
             },
-            750:{
+            800:{
                 slidesPerView: 2,
             },
             1300:{
