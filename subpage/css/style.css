@@ -494,6 +494,9 @@ header .header_inner .backPage a{
 	#study_list .study_list_inner > ul.left > ul {
 		flex-direction: column;
 	}
+	#study_list .study_list_inner ul.right ul li:first-child{
+		padding-top: 10px;
+	}
 }
 @media only screen and (max-width: 700px) {
 	#study_list .study_list_inner ul.right ul{
@@ -503,7 +506,7 @@ header .header_inner .backPage a{
 		align-items: flex-start;
 	}
 	#study_list .study_list_inner ul.right ul{
-		gap: 0;
+		gap: 20px;
 	}
 }
 
@@ -575,25 +578,23 @@ header .header_inner .backPage a{
 
 
 @media only screen and (max-width: 600px) {
-	#study_list .study_list_inner ul.right ul li:first-child{
-		padding-top: 10px;
-	}
-	#study_list .study_list_inner ul.right ul{
+
+	/* #study_list .study_list_inner ul.right ul{
 		gap: 30px;
-	}
-	#study_list .study_list_inner ul.right ul li > a{
+	} */
+	/* #study_list .study_list_inner ul.right ul li > a{
 		padding: 10px 40px 10px 0;
-	}
+	} */
 }
 
 
 @media only screen and (max-width: 560px) {
-	#study_list .study_list_inner > ul.left > ul li:first-child{
+	/* #study_list .study_list_inner > ul.left > ul li:first-child{
 		font-size: 1.5em;
 		width: 100px;
-	}
+	} */
 	#study_list .study_list_inner ul.right ul li:first-child{
-		width: 100px;
+		width: 300px;
 		font-size: 1em;
 	}
 	#study_list .study_list_inner > ul.left > ul{
@@ -628,6 +629,9 @@ header .header_inner .backPage a{
 	}
 	#page2 .page2_inner .sklis_list_inner > ul.left > ul li:last-child{
 		display: none
+	}
+	#study_list .study_list_inner > ul.left > ul li:first-child{
+		width: 200px;
 	}
 }
 
