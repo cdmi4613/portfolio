@@ -162,55 +162,61 @@ window.addEventListener("load", function(){
 		});
 	}
 
-	// 이전 비디오
-	// let video=document.getElementById("Aimg");
-	// video.muted=true;
+	
+// 	let video=document.getElementById("Aimg");
+// 	video.muted=true;
 
-	// let buttonList=document.querySelectorAll(".right p a");
+// 	let buttonList=document.querySelectorAll(".right p a");
 
-	// let videoList=["layout.mp4", "graph.mp4", "key.mp4"];
-	// let flag;
+// 	let videoList=["layout.mp4", "graph.mp4", "key.mp4"];
+// 	let flag;
 
+// 	for(let i=0; i<buttonList.length; i++){
+// 		buttonList[i].addEventListener("mouseenter", function(e){
+// 			playVideo(i, videoList[i]);
+// 			video.classList.add("no");
+// 		});
 
+// 		buttonList[i].addEventListener("mouseleave", function(e){
+// 			flag=null;
+// 			video.classList.remove("no");
+// 		});
+// 	}
 
-	// for(let i=0; i<buttonList.length; i++){
+// 	function playVideo(n, src){
+// 		// console.log(n, src);
 
-	// 	buttonList[i].addEventListener("mouseenter", function(e){
-	// 		playVideo(i, videoList[i]);
-	// 		video.classList.add("no");
-	// 	});
+// 		if(flag != n){
+// 			flag=n;
+// 			video.setAttribute("src", "./video/"+src);
+// 		}
+// 		else{
+// 			flag=null;
+// 		}
+// 	}
 
-	// 	buttonList[i].addEventListener("mouseleave", function(e){
-	// 		video.pause();
-	// 		flag=null;
-	// 		video.classList.remove("no");
-	// 	});
-	// }
+// 	video.addEventListener("loadeddata", function(){
+// 		// console.log("loadeddata");
+// 		video.play();
+// 	});
 
-	// function playVideo(n, src){
-	// 	console.log(n, src);
+// 	video.addEventListener("ended", function(){
+// 		flag=null;
+// 	});
 
-	// 	if(flag != n){
-	// 		flag=n;
-	// 		video.setAttribute("src", "video/"+src);
+// 	let strong=document.getElementById("hover-text")
+// 	let button=document.getElementById("button");
 
-	// 		video.currentTime=0;
-	// 		video.play();
-	// 	}
-	// 	else{
-	// 		return;
-	// 	}
-	// }
+// 	strong.addEventListener("mouseenter", function(){
+// 		button.classList.add("up");
+// 	})
 
-	// video.addEventListener("ended", function(){
-	// 	flag=null;
-	// });
+// 	strong.addEventListener("mouseleave", function(){
+// 		button.classList.remove("up");
+// 	})
+// })
 
-	// // 이전 비디오 끝
-
-
-	// 오류 대체 비디오
-	let video=document.getElementById("Aimg");
+let video=document.getElementById("Aimg");
 	video.muted=true;
 
 	let buttonList=document.querySelectorAll(".right p a");
@@ -229,6 +235,21 @@ window.addEventListener("load", function(){
 			video.classList.remove("no");
 		});
 	}
+
+	// 
+	for (let i = 0; i < buttonList.length; i++) {
+		buttonList[i].addEventListener("click", function() {
+			if (flag !== i) {  // 다른 버튼의 비디오가 클릭된 경우
+				playVideo(i, videoList[i]);
+				video.classList.add("no");
+			} else {  // 같은 버튼이 다시 클릭된 경우
+				video.pause();  // 비디오 일시중지
+				video.classList.remove("no");
+				flag = null;  // 플래그 초기화
+			}
+		});
+	}
+	// 
 
 	function playVideo(n, src){
 		// console.log(n, src);
@@ -261,5 +282,8 @@ window.addEventListener("load", function(){
 	strong.addEventListener("mouseleave", function(){
 		button.classList.remove("up");
 	})
+})
+
+
+
 	
-});
