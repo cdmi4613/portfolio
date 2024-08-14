@@ -37,7 +37,7 @@ window.addEventListener("load", function(){
 	// }, );
 
 	let wint, winh;
-	let section=document.querySelectorAll("section");
+	let section=document.querySelectorAll(".page");
 	let pageList=[];
 	let pageNum=document.getElementById("pagenumber");
 	let n=0;
@@ -162,60 +162,6 @@ window.addEventListener("load", function(){
 		});
 	}
 
-	
-// 	let video=document.getElementById("Aimg");
-// 	video.muted=true;
-
-// 	let buttonList=document.querySelectorAll(".right p a");
-
-// 	let videoList=["layout.mp4", "graph.mp4", "key.mp4"];
-// 	let flag;
-
-// 	for(let i=0; i<buttonList.length; i++){
-// 		buttonList[i].addEventListener("mouseenter", function(e){
-// 			playVideo(i, videoList[i]);
-// 			video.classList.add("no");
-// 		});
-
-// 		buttonList[i].addEventListener("mouseleave", function(e){
-// 			flag=null;
-// 			video.classList.remove("no");
-// 		});
-// 	}
-
-// 	function playVideo(n, src){
-// 		// console.log(n, src);
-
-// 		if(flag != n){
-// 			flag=n;
-// 			video.setAttribute("src", "./video/"+src);
-// 		}
-// 		else{
-// 			flag=null;
-// 		}
-// 	}
-
-// 	video.addEventListener("loadeddata", function(){
-// 		// console.log("loadeddata");
-// 		video.play();
-// 	});
-
-// 	video.addEventListener("ended", function(){
-// 		flag=null;
-// 	});
-
-// 	let strong=document.getElementById("hover-text")
-// 	let button=document.getElementById("button");
-
-// 	strong.addEventListener("mouseenter", function(){
-// 		button.classList.add("up");
-// 	})
-
-// 	strong.addEventListener("mouseleave", function(){
-// 		button.classList.remove("up");
-// 	})
-// })
-
 let video=document.getElementById("Aimg");
 	video.muted=true;
 
@@ -239,13 +185,13 @@ let video=document.getElementById("Aimg");
 	// 
 	for (let i = 0; i < buttonList.length; i++) {
 		buttonList[i].addEventListener("click", function() {
-			if (flag !== i) {  // 다른 버튼의 비디오가 클릭된 경우
+			if (flag !== i) {  
 				playVideo(i, videoList[i]);
 				video.classList.add("no");
-			} else {  // 같은 버튼이 다시 클릭된 경우
-				video.pause();  // 비디오 일시중지
+			} else {  
+				video.pause();  
 				video.classList.remove("no");
-				flag = null;  // 플래그 초기화
+				flag = null;  
 			}
 		});
 	}
