@@ -506,7 +506,7 @@ body.white #page1 .right > p > a{
 	transition: color 0.3s;
 }
 .white #page1 .right ul li{
-	-webkit-color: #fff;
+	-webkit-text-fill-color: #fff;
 	-moz-color: #fff;
 	-ms-color: #fff;
 	-o-color: #fff;
